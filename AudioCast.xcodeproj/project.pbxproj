@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC7A48411E81281A00BB95EA /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7A48401E81281A00BB95EA /* MultipeerConnectivity.framework */; };
 		FC8492BD1E80D2340083CC0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8492BC1E80D2340083CC0C /* main.m */; };
 		FC8492C01E80D2340083CC0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8492BF1E80D2340083CC0C /* AppDelegate.m */; };
 		FC8492C31E80D2340083CC0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8492C21E80D2340083CC0C /* ViewController.m */; };
@@ -16,6 +17,10 @@
 		FC8492D61E80D2350083CC0C /* AudioCastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8492D51E80D2350083CC0C /* AudioCastTests.m */; };
 		FC8492E11E80D2350083CC0C /* AudioCastUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8492E01E80D2350083CC0C /* AudioCastUITests.m */; };
 		FC8492F11E80D3530083CC0C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8492F01E80D3530083CC0C /* AudioToolbox.framework */; };
+		FC8492F31E80D50D0083CC0C /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8492F21E80D50D0083CC0C /* MediaPlayer.framework */; };
+		FC8492F51E80D5330083CC0C /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8492F41E80D5330083CC0C /* MediaToolbox.framework */; };
+		FC8492F71E80D5430083CC0C /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8492F61E80D5430083CC0C /* MediaAccessibility.framework */; };
+		FC892EEE1E80E9D90011E540 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC892EED1E80E9D90011E540 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC7A48401E81281A00BB95EA /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		FC8492B81E80D2340083CC0C /* AudioCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8492BC1E80D2340083CC0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC8492BE1E80D2340083CC0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +60,11 @@
 		FC8492E21E80D2350083CC0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC8492EE1E80D3530083CC0C /* AudioCast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AudioCast.entitlements; sourceTree = "<group>"; };
 		FC8492F01E80D3530083CC0C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FC8492F21E80D50D0083CC0C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		FC8492F41E80D5330083CC0C /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
+		FC8492F61E80D5430083CC0C /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
+		FC892EED1E80E9D90011E540 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FC892EEF1E80E9F50011E540 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7A48411E81281A00BB95EA /* MultipeerConnectivity.framework in Frameworks */,
+				FC892EEE1E80E9D90011E540 /* AVFoundation.framework in Frameworks */,
+				FC8492F71E80D5430083CC0C /* MediaAccessibility.framework in Frameworks */,
+				FC8492F51E80D5330083CC0C /* MediaToolbox.framework in Frameworks */,
+				FC8492F31E80D50D0083CC0C /* MediaPlayer.framework in Frameworks */,
 				FC8492F11E80D3530083CC0C /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +165,12 @@
 		FC8492EF1E80D3530083CC0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC7A48401E81281A00BB95EA /* MultipeerConnectivity.framework */,
+				FC892EEF1E80E9F50011E540 /* AudioUnit.framework */,
+				FC892EED1E80E9D90011E540 /* AVFoundation.framework */,
+				FC8492F61E80D5430083CC0C /* MediaAccessibility.framework */,
+				FC8492F41E80D5330083CC0C /* MediaToolbox.framework */,
+				FC8492F21E80D50D0083CC0C /* MediaPlayer.framework */,
 				FC8492F01E80D3530083CC0C /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
@@ -535,6 +557,7 @@
 				FC8492E71E80D2350083CC0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC8492E81E80D2350083CC0C /* Build configuration list for PBXNativeTarget "AudioCastTests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +566,7 @@
 				FC8492EA1E80D2350083CC0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FC8492EB1E80D2350083CC0C /* Build configuration list for PBXNativeTarget "AudioCastUITests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +575,7 @@
 				FC8492ED1E80D2350083CC0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
