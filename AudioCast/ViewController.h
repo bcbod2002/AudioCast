@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SimplePing.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SimplePingDelegate>
 
 
 @end
