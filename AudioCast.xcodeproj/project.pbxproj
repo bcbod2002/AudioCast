@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FC7A48411E81281A00BB95EA /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7A48401E81281A00BB95EA /* MultipeerConnectivity.framework */; };
+		FC7A48461E812A5800BB95EA /* AlbumCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A48451E812A5800BB95EA /* AlbumCollectionView.m */; };
+		FC7A48471E812A5800BB95EA /* AlbumCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A48451E812A5800BB95EA /* AlbumCollectionView.m */; };
+		FC7A48481E812A5800BB95EA /* AlbumCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A48451E812A5800BB95EA /* AlbumCollectionView.m */; };
+		FC7A484D1E81350900BB95EA /* MCManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A484C1E81350900BB95EA /* MCManagerModel.m */; };
+		FC7A484E1E81350900BB95EA /* MCManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A484C1E81350900BB95EA /* MCManagerModel.m */; };
+		FC7A48521E813DF300BB95EA /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A48511E813DF300BB95EA /* ConnectionsViewController.m */; };
+		FC7A48531E813DF300BB95EA /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A48511E813DF300BB95EA /* ConnectionsViewController.m */; };
 		FC8492BD1E80D2340083CC0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8492BC1E80D2340083CC0C /* main.m */; };
 		FC8492C01E80D2340083CC0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8492BF1E80D2340083CC0C /* AppDelegate.m */; };
 		FC8492C31E80D2340083CC0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8492C21E80D2340083CC0C /* ViewController.m */; };
@@ -21,6 +28,10 @@
 		FC8492F51E80D5330083CC0C /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8492F41E80D5330083CC0C /* MediaToolbox.framework */; };
 		FC8492F71E80D5430083CC0C /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8492F61E80D5430083CC0C /* MediaAccessibility.framework */; };
 		FC892EEE1E80E9D90011E540 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC892EED1E80E9D90011E540 /* AVFoundation.framework */; };
+		FCB032A31E8CB430001F988A /* MPMediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB032A21E8CB430001F988A /* MPMediaModel.m */; };
+		FCE9D35F1E82CC92003BB45F /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE9D35E1E82CC92003BB45F /* SimplePing.m */; };
+		FCFB212F1E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */; };
+		FCFB21301E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +53,12 @@
 
 /* Begin PBXFileReference section */
 		FC7A48401E81281A00BB95EA /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		FC7A48441E812A5800BB95EA /* AlbumCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCollectionView.h; sourceTree = "<group>"; };
+		FC7A48451E812A5800BB95EA /* AlbumCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCollectionView.m; sourceTree = "<group>"; };
+		FC7A484B1E81350900BB95EA /* MCManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCManagerModel.h; sourceTree = "<group>"; };
+		FC7A484C1E81350900BB95EA /* MCManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManagerModel.m; sourceTree = "<group>"; };
+		FC7A48501E813DF300BB95EA /* ConnectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsViewController.h; sourceTree = "<group>"; };
+		FC7A48511E813DF300BB95EA /* ConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionsViewController.m; sourceTree = "<group>"; };
 		FC8492B81E80D2340083CC0C /* AudioCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8492BC1E80D2340083CC0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC8492BE1E80D2340083CC0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +82,12 @@
 		FC8492F61E80D5430083CC0C /* MediaAccessibility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaAccessibility.framework; path = System/Library/Frameworks/MediaAccessibility.framework; sourceTree = SDKROOT; };
 		FC892EED1E80E9D90011E540 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FC892EEF1E80E9F50011E540 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		FCB032A11E8CB430001F988A /* MPMediaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaModel.h; sourceTree = "<group>"; };
+		FCB032A21E8CB430001F988A /* MPMediaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMediaModel.m; sourceTree = "<group>"; };
+		FCE9D35D1E82CC92003BB45F /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		FCE9D35E1E82CC92003BB45F /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		FCFB212D1E88EBA6009FAC9E /* GWSimplePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWSimplePlayer.h; sourceTree = "<group>"; };
+		FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWSimplePlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +121,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC7A48421E8129D500BB95EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC7A48431E812A2100BB95EA /* AlbumCollectionView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC7A48431E812A2100BB95EA /* AlbumCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FC7A48441E812A5800BB95EA /* AlbumCollectionView.h */,
+				FC7A48451E812A5800BB95EA /* AlbumCollectionView.m */,
+			);
+			path = AlbumCollectionView;
+			sourceTree = "<group>";
+		};
+		FC7A48491E8134EB00BB95EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCB032A01E8CB430001F988A /* MPMediaModel */,
+				FC7A484A1E8134EB00BB95EA /* MCManagerModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC7A484A1E8134EB00BB95EA /* MCManagerModel */ = {
+			isa = PBXGroup;
+			children = (
+				FC7A484B1E81350900BB95EA /* MCManagerModel.h */,
+				FC7A484C1E81350900BB95EA /* MCManagerModel.m */,
+			);
+			path = MCManagerModel;
+			sourceTree = "<group>";
+		};
+		FC7A484F1E813D5400BB95EA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC7A48501E813DF300BB95EA /* ConnectionsViewController.h */,
+				FC7A48511E813DF300BB95EA /* ConnectionsViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		FC8492AF1E80D2340083CC0C = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +189,10 @@
 		FC8492BA1E80D2340083CC0C /* AudioCast */ = {
 			isa = PBXGroup;
 			children = (
+				FCE9D35B1E82CC92003BB45F /* Utility */,
+				FC7A484F1E813D5400BB95EA /* ViewController */,
+				FC7A48491E8134EB00BB95EA /* Model */,
+				FC7A48421E8129D500BB95EA /* View */,
 				FC8492EE1E80D3530083CC0C /* AudioCast.entitlements */,
 				FC8492BE1E80D2340083CC0C /* AppDelegate.h */,
 				FC8492BF1E80D2340083CC0C /* AppDelegate.m */,
@@ -174,6 +245,42 @@
 				FC8492F01E80D3530083CC0C /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCB032A01E8CB430001F988A /* MPMediaModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCB032A11E8CB430001F988A /* MPMediaModel.h */,
+				FCB032A21E8CB430001F988A /* MPMediaModel.m */,
+			);
+			path = MPMediaModel;
+			sourceTree = "<group>";
+		};
+		FCE9D35B1E82CC92003BB45F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				FCFB212C1E88EA73009FAC9E /* GWSimplePlayer */,
+				FCE9D35C1E82CC92003BB45F /* SimplePing */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		FCE9D35C1E82CC92003BB45F /* SimplePing */ = {
+			isa = PBXGroup;
+			children = (
+				FCE9D35D1E82CC92003BB45F /* SimplePing.h */,
+				FCE9D35E1E82CC92003BB45F /* SimplePing.m */,
+			);
+			path = SimplePing;
+			sourceTree = "<group>";
+		};
+		FCFB212C1E88EA73009FAC9E /* GWSimplePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				FCFB212D1E88EBA6009FAC9E /* GWSimplePlayer.h */,
+				FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */,
+			);
+			path = GWSimplePlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,8 +424,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFB212F1E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */,
+				FC7A48461E812A5800BB95EA /* AlbumCollectionView.m in Sources */,
 				FC8492C31E80D2340083CC0C /* ViewController.m in Sources */,
+				FC7A484D1E81350900BB95EA /* MCManagerModel.m in Sources */,
 				FC8492C01E80D2340083CC0C /* AppDelegate.m in Sources */,
+				FC7A48521E813DF300BB95EA /* ConnectionsViewController.m in Sources */,
+				FCE9D35F1E82CC92003BB45F /* SimplePing.m in Sources */,
+				FCB032A31E8CB430001F988A /* MPMediaModel.m in Sources */,
 				FC8492BD1E80D2340083CC0C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,7 +440,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCFB21301E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */,
+				FC7A48471E812A5800BB95EA /* AlbumCollectionView.m in Sources */,
 				FC8492D61E80D2350083CC0C /* AudioCastTests.m in Sources */,
+				FC7A484E1E81350900BB95EA /* MCManagerModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +451,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC7A48481E812A5800BB95EA /* AlbumCollectionView.m in Sources */,
+				FC7A48531E813DF300BB95EA /* ConnectionsViewController.m in Sources */,
 				FC8492E11E80D2350083CC0C /* AudioCastUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
