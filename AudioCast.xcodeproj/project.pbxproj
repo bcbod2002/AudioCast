@@ -32,6 +32,7 @@
 		FCDE13821E8E281E00FFDC28 /* Rythem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCDE13811E8E281E00FFDC28 /* Rythem.mp3 */; };
 		FCDE138A1E8FE36400FFDC28 /* GBPing.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE13861E8FE36400FFDC28 /* GBPing.m */; };
 		FCDE138B1E8FE36400FFDC28 /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE13881E8FE36400FFDC28 /* GBPingSummary.m */; };
+		FCDE138E1E9011F300FFDC28 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE138D1E9011F300FFDC28 /* BluetoothViewController.m */; };
 		FCE9D35F1E82CC92003BB45F /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE9D35E1E82CC92003BB45F /* SimplePing.m */; };
 		FCFB212F1E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */; };
 		FCFB21301E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */; };
@@ -94,6 +95,8 @@
 		FCDE13871E8FE36400FFDC28 /* GBPingSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBPingSummary.h; sourceTree = "<group>"; };
 		FCDE13881E8FE36400FFDC28 /* GBPingSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBPingSummary.m; sourceTree = "<group>"; };
 		FCDE13891E8FE36400FFDC28 /* ICMPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMPHeader.h; sourceTree = "<group>"; };
+		FCDE138C1E9011F300FFDC28 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothViewController.h; sourceTree = "<group>"; };
+		FCDE138D1E9011F300FFDC28 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothViewController.m; sourceTree = "<group>"; };
 		FCE9D35D1E82CC92003BB45F /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		FCE9D35E1E82CC92003BB45F /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		FCFB212D1E88EBA6009FAC9E /* GWSimplePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWSimplePlayer.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 			children = (
 				FC7A48501E813DF300BB95EA /* ConnectionsViewController.h */,
 				FC7A48511E813DF300BB95EA /* ConnectionsViewController.m */,
+				FCDE138C1E9011F300FFDC28 /* BluetoothViewController.h */,
+				FCDE138D1E9011F300FFDC28 /* BluetoothViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDE138A1E8FE36400FFDC28 /* GBPing.m in Sources */,
+				FCDE138E1E9011F300FFDC28 /* BluetoothViewController.m in Sources */,
 				FCFB212F1E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */,
 				FC7A48461E812A5800BB95EA /* AlbumCollectionView.m in Sources */,
 				FC8492C31E80D2340083CC0C /* ViewController.m in Sources */,
