@@ -10,6 +10,12 @@
 
 #define ServiceType @"audioshare"
 
+@interface MCManagerModel() {
+    NSInteger timeStampCounter;
+}
+
+@end
+
 @implementation MCManagerModel
 
 -(instancetype)init {
@@ -19,6 +25,8 @@
 //        _session = nil;
 //        _serviceAdvertiser = nil;
         [self setupPeerSessionWithName:[[UIDevice currentDevice] name]];
+        timeStampCounter = 0;
+        _averageTimeStamp = 0;
     }
     
     return self;
@@ -64,7 +72,6 @@
 }
 
 -(void)sendMediaData:(NSData *)mediaData {
-    NSLog(@"mediaData length = %d", [mediaData length]);
     if ([[_session connectedPeers] count] > 0) {
         NSError *error;
         [_session sendData:mediaData toPeers:[_session connectedPeers] withMode:MCSessionSendDataReliable error:&error];
@@ -73,6 +80,31 @@
     else {
         NSLog(@"Not connected yet");
     }
+}
+
+-(void)sendMediaStreamWithData:(NSData *)mediaData {
+    if ([[_session connectedPeers] count] > 0) {
+        NSError *error;
+        NSOutputStream *outputStream = [_session startStreamWithName:@"MediaStream" toPeer:[[_session connectedPeers] objectAtIndex:0] error:&error];
+        
+        const uint8_t *bytes = (const uint8_t *)[mediaData bytes];
+        [outputStream write:bytes maxLength:[mediaData length]];
+        
+        NSLog(@"Stream error = %@", [error description]);
+    }
+}
+
+-(void)sendTenTimeStamp {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        for (int i = 0; i < 9; ++i) {
+            long double timeStamp = [[NSDate date] timeIntervalSince1970];
+            NSData *timeStampData = [NSData dataWithBytes:&timeStamp length:sizeof(long double)];
+            
+            NSError *sendDataError;
+            [_session sendData:timeStampData toPeers:[_session connectedPeers] withMode:MCSessionSendDataUnreliable error:&sendDataError];
+            [NSThread sleepForTimeInterval:0.1];
+        }
+    });
 }
 
 
@@ -84,14 +116,27 @@
             [_delegate manager:self didConnectPeers:[session connectedPeers]];
         }];
     }
+    [self sendTenTimeStamp];
 }
 
 -(void)session:(MCSession *)session didReceiveData:(NSData *)data fromPeer:(MCPeerID *)peerID {
-    NSLog(@"Did receive data = %@", data);
-    if ([_delegate respondsToSelector:@selector(manager:didReceiveData:fromPeer:)]) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [_delegate manager:self didReceiveData:data fromPeer:[peerID displayName]];
-        }];
+    
+    if ([data length] <= 8) {
+        long double timeStamp;
+        [data getBytes:&timeStamp length:sizeof(timeStamp)];
+        timeStamp = [[NSDate date] timeIntervalSinceDate:[NSDate dateWithTimeIntervalSince1970:timeStamp]];
+        _averageTimeStamp += timeStamp;
+        if (timeStampCounter > 1) {
+            _averageTimeStamp = _averageTimeStamp / 2;
+        }
+        NSLog(@"_averageTimeStamp = %Lf", _averageTimeStamp);
+    }
+    else {
+        if ([_delegate respondsToSelector:@selector(manager:didReceiveData:fromPeer:)]) {
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [_delegate manager:self didReceiveData:data fromPeer:[peerID displayName]];
+            }];
+        }
     }
 }
 

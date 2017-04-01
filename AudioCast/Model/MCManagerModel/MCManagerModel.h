@@ -31,6 +31,7 @@
 @property (nonatomic, strong) MCSession *session;
 @property (nonatomic, strong) MCNearbyServiceAdvertiser *serviceAdvertiser;
 @property (nonatomic, strong) MCNearbyServiceBrowser *serviceBrowser;
+@property (nonatomic) long double averageTimeStamp;
 
 #pragma mark - Functions
 
@@ -68,4 +69,11 @@
  @param string Media data
  */
 -(void)sendMediaData:(NSData *)string;
+
+/**
+ Send media stream to others
+
+ @param mediaData Media data;
+ */
+-(void)sendMediaStreamWithData:(NSData *)mediaData;
 @end
