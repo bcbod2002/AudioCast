@@ -29,6 +29,9 @@
 		FC8492F71E80D5430083CC0C /* MediaAccessibility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8492F61E80D5430083CC0C /* MediaAccessibility.framework */; };
 		FC892EEE1E80E9D90011E540 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC892EED1E80E9D90011E540 /* AVFoundation.framework */; };
 		FCB032A31E8CB430001F988A /* MPMediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB032A21E8CB430001F988A /* MPMediaModel.m */; };
+		FCDE13821E8E281E00FFDC28 /* Rythem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCDE13811E8E281E00FFDC28 /* Rythem.mp3 */; };
+		FCDE138A1E8FE36400FFDC28 /* GBPing.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE13861E8FE36400FFDC28 /* GBPing.m */; };
+		FCDE138B1E8FE36400FFDC28 /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE13881E8FE36400FFDC28 /* GBPingSummary.m */; };
 		FCE9D35F1E82CC92003BB45F /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE9D35E1E82CC92003BB45F /* SimplePing.m */; };
 		FCFB212F1E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */; };
 		FCFB21301E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */; };
@@ -84,6 +87,13 @@
 		FC892EEF1E80E9F50011E540 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		FCB032A11E8CB430001F988A /* MPMediaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPMediaModel.h; sourceTree = "<group>"; };
 		FCB032A21E8CB430001F988A /* MPMediaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPMediaModel.m; sourceTree = "<group>"; };
+		FCDE13811E8E281E00FFDC28 /* Rythem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Rythem.mp3; sourceTree = "<group>"; };
+		FCDE13841E8FE36400FFDC28 /* GBPing-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GBPing-Prefix.pch"; sourceTree = "<group>"; };
+		FCDE13851E8FE36400FFDC28 /* GBPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBPing.h; sourceTree = "<group>"; };
+		FCDE13861E8FE36400FFDC28 /* GBPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBPing.m; sourceTree = "<group>"; };
+		FCDE13871E8FE36400FFDC28 /* GBPingSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBPingSummary.h; sourceTree = "<group>"; };
+		FCDE13881E8FE36400FFDC28 /* GBPingSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBPingSummary.m; sourceTree = "<group>"; };
+		FCDE13891E8FE36400FFDC28 /* ICMPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMPHeader.h; sourceTree = "<group>"; };
 		FCE9D35D1E82CC92003BB45F /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		FCE9D35E1E82CC92003BB45F /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
 		FCFB212D1E88EBA6009FAC9E /* GWSimplePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWSimplePlayer.h; sourceTree = "<group>"; };
@@ -210,6 +220,7 @@
 		FC8492BB1E80D2340083CC0C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE13811E8E281E00FFDC28 /* Rythem.mp3 */,
 				FC8492BC1E80D2340083CC0C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -256,9 +267,23 @@
 			path = MPMediaModel;
 			sourceTree = "<group>";
 		};
+		FCDE13831E8FE36400FFDC28 /* GBPing */ = {
+			isa = PBXGroup;
+			children = (
+				FCDE13841E8FE36400FFDC28 /* GBPing-Prefix.pch */,
+				FCDE13851E8FE36400FFDC28 /* GBPing.h */,
+				FCDE13861E8FE36400FFDC28 /* GBPing.m */,
+				FCDE13871E8FE36400FFDC28 /* GBPingSummary.h */,
+				FCDE13881E8FE36400FFDC28 /* GBPingSummary.m */,
+				FCDE13891E8FE36400FFDC28 /* ICMPHeader.h */,
+			);
+			path = GBPing;
+			sourceTree = "<group>";
+		};
 		FCE9D35B1E82CC92003BB45F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE13831E8FE36400FFDC28 /* GBPing */,
 				FCFB212C1E88EA73009FAC9E /* GWSimplePlayer */,
 				FCE9D35C1E82CC92003BB45F /* SimplePing */,
 			);
@@ -353,6 +378,9 @@
 						DevelopmentTeam = 9A66GT333H;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.InterAppAudio = {
 								enabled = 1;
 							};
@@ -398,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8492CB1E80D2340083CC0C /* LaunchScreen.storyboard in Resources */,
+				FCDE13821E8E281E00FFDC28 /* Rythem.mp3 in Resources */,
 				FC8492C81E80D2340083CC0C /* Assets.xcassets in Resources */,
 				FC8492C61E80D2340083CC0C /* Main.storyboard in Resources */,
 			);
@@ -424,11 +453,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCDE138A1E8FE36400FFDC28 /* GBPing.m in Sources */,
 				FCFB212F1E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */,
 				FC7A48461E812A5800BB95EA /* AlbumCollectionView.m in Sources */,
 				FC8492C31E80D2340083CC0C /* ViewController.m in Sources */,
 				FC7A484D1E81350900BB95EA /* MCManagerModel.m in Sources */,
 				FC8492C01E80D2340083CC0C /* AppDelegate.m in Sources */,
+				FCDE138B1E8FE36400FFDC28 /* GBPingSummary.m in Sources */,
 				FC7A48521E813DF300BB95EA /* ConnectionsViewController.m in Sources */,
 				FCE9D35F1E82CC92003BB45F /* SimplePing.m in Sources */,
 				FCB032A31E8CB430001F988A /* MPMediaModel.m in Sources */,
@@ -587,6 +618,7 @@
 				CODE_SIGN_ENTITLEMENTS = AudioCast/AudioCast.entitlements;
 				DEVELOPMENT_TEAM = 9A66GT333H;
 				INFOPLIST_FILE = AudioCast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.goston.com.tw.AudioCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,6 +632,7 @@
 				CODE_SIGN_ENTITLEMENTS = AudioCast/AudioCast.entitlements;
 				DEVELOPMENT_TEAM = 9A66GT333H;
 				INFOPLIST_FILE = AudioCast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.goston.com.tw.AudioCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
