@@ -16,10 +16,12 @@
 #include <netdb.h>
 
 #import "GWSimplePlayer.h"
+#import "GBPing.h"
 
-@interface ViewController () <NSStreamDelegate> {
+@interface ViewController () <NSStreamDelegate, GBPingDelegate> {
     AVAudioPlayer *player;
     SimplePing *ping;
+    GBPing *gPing;
     
     GWSimplePlayer *simplePlayer;
 }
@@ -31,39 +33,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-//    [MPMediaLibrary requestAuthorization:^(MPMediaLibraryAuthorizationStatus status) {
-//        switch (status) {
-//            case MPMediaLibraryAuthorizationStatusDenied:
-//                NSLog(@"Deny");
-//                break;
-//            case MPMediaLibraryAuthorizationStatusRestricted:
-//                NSLog(@"Restricted");
-//                break;
-//            case MPMediaLibraryAuthorizationStatusAuthorized:
-//                NSLog(@"Authorized");
-//                break;
-//            case MPMediaLibraryAuthorizationStatusNotDetermined:
-//                NSLog(@"Not Determine");
-//                break;
-//                
-//            default:
-//                break;
-//        }
-//    }];
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:@"yyyyMMddHHmmssss"];
+//    NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
+//    NSLog(@"dateString = %@", dateString);
 //    
-//    MPMediaQuery *mediaQuery = [[MPMediaQuery alloc] init];
-//    NSArray<MPMediaItem *> *songsArray = [mediaQuery items];
+//    long double time1 = ([[NSDate date] timeIntervalSince1970] * 1000);
+////    [NSThread sleepForTimeInterval:0.5];
+//    long double time2 = ([[NSDate date] timeIntervalSince1970] * 1000);
+////    [NSThread sleepForTimeInterval:0.5];
+//    long double time3 = ([[NSDate date] timeIntervalSince1970] * 1000);
+////    [NSThread sleepForTimeInterval:0.5];
+//    long double time4 = ([[NSDate date] timeIntervalSince1970] * 1000);
+////    [NSThread sleepForTimeInterval:0.5];
+//    long double time5 = ([[NSDate date] timeIntervalSince1970] * 1000);
 //    
-//    [[AVAudioSession sharedInstance] setActive:YES error:nil];
-//    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
-//    MPMediaItem *mediaItem = [songsArray objectAtIndex:0];
-//    NSLog(@"mediaItem = %@", [mediaItem valueForProperty:MPMediaItemPropertyAssetURL]);
-//    NSError *error;
-//    player = [[AVAudioPlayer alloc] initWithContentsOfURL:[mediaItem assetURL] error:&error];
-//
-//    [player play];
-//    [self playStreamMp3];
+//    NSLog(@"ReferenceDate = %Lf",time1);
+//    NSLog(@"ReferenceDate = %Lf",time2);
+//    NSLog(@"ReferenceDate = %Lf",time2 - time1);
+//    NSLog(@"ReferenceDate = %Lf",time3 - time2);
+//    NSLog(@"ReferenceDate = %Lf",time4 - time3);
+//    NSLog(@"ReferenceDate = %Lf",time5 - time4);
 }
 
 /*
@@ -112,7 +102,7 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"DID appear");
+    NSLog(@"DID appear QQ");
     // Simple Ping
 //    ping = [[SimplePing alloc] initWithHostName:@"192.168.50.1"];
 //    [ping setAddressStyle:SimplePingAddressStyleICMPv4];
@@ -123,9 +113,23 @@
 //    NSURL *streamURL = [[NSURL alloc] initWithString:@"http://picosong.com/cdn/5db14bc849fca52f661dec94a0cd55dc.mp3"];
 //    NSURL *streamURL = [[NSURL alloc] initWithString:@"http://picosong.com/cdn/a063a24a5ee7e4bc3c580c9ae0c8a26c.mp3"];
 //    NSURL *streamURL = [[NSURL alloc] initWithString:@"http://www.iwant-music.com/music/icd2_10_1.mp3"];
-    NSURL *streamURL = [[NSURL alloc] initWithString:@"https://www.dropbox.com/s/hzmqkdby6a743jo/Rythem%20-%20ホウキ雲.mp3?dl=0#"];
-    simplePlayer = [[GWSimplePlayer alloc] initWithURL:streamURL];
-    [simplePlayer play];
+    NSURL *streamURL = [[NSURL alloc] initWithString:@"http://picosong.com/cdn/f33bd2cf027b74d163ed2ec90d769787.mp3"];
+//    simplePlayer = [[GWSimplePlayer alloc] initWithURL:streamURL];
+//    [simplePlayer play];
+    
+//    gPing = [[GBPing alloc] init];
+//    [gPing setDelegate:self];
+//    [gPing setHost:@"168.95.1.1"];
+//    [gPing setTimeout:10];
+//    [gPing setPingPeriod:0.9];
+//    [gPing setupWithBlock:^(BOOL success, NSError *error) {
+//        if (success) {
+//            [gPing startPinging];
+//        }
+//        else {
+//            NSLog(@"Setup failed");
+//        }
+//    }];
 }
 
 -(void)sendPing {
@@ -163,4 +167,17 @@
 }
 
 
+#pragma mark - GBPing
+-(void)ping:(GBPing *)pinger didFailWithError:(NSError *)error {
+    NSLog(@"Did fail with = %@", [error description]);
+}
+
+-(void)ping:(GBPing *)pinger didSendPingWithSummary:(GBPingSummary *)summary {
+//    NSLog(@"Send = host = %@, sequence number = %ld, rtt = %f", [summary host], [summary sequenceNumber], [summary rtt]);
+}
+
+-(void)ping:(GBPing *)pinger didReceiveReplyWithSummary:(GBPingSummary *)summary {
+//    NSLog(@"Reply = host = %@, sequence number = %ld, rtt = %f ms", [summary host], [summary sequenceNumber], [summary rtt] * 1000);
+    NSLog(@"Summary = %@", summary);
+}
 @end
