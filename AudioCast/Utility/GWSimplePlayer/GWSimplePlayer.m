@@ -54,6 +54,9 @@ static void GWAudioQueueRunnungListener(void * inUserData,
 -(instancetype)init {
     self = [super init];
     if (self) {
+        NSError *audioSessionError = nil;
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&audioSessionError];
+        [[AVAudioSession sharedInstance] setActive:YES withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&audioSessionError];
         PlayerStatus.stopped = NO;
         packetsArray = [[NSMutableArray alloc] init];
         
@@ -95,10 +98,10 @@ static void GWAudioQueueRunnungListener(void * inUserData,
 }
 
 -(void)playAudioWithData:(NSData *)data {
-    NSLog(@"Audio Length = %lu", (unsigned long)[data length]);
-//    AudioFileStreamParseBytes(audioFileStreamID, (UInt32)[data length], [data bytes], 0);
-    OSStatus status = AudioFileStreamParseBytes(audioFileStreamID, (UInt32)[data length], [data bytes], kAudioFileStreamParseFlag_Discontinuity);
-    assert(status = noErr);
+//    NSLog(@"Audio Length = %lu", (unsigned long)[data length]);
+    AudioFileStreamParseBytes(audioFileStreamID, (UInt32)[data length], [data bytes], 0);
+//    OSStatus status = AudioFileStreamParseBytes(audioFileStreamID, (UInt32)[data length], [data bytes], kAudioFileStreamParseFlag_Discontinuity);
+//    assert(status = noErr);
 }
 
 -(void)pause {
@@ -118,6 +121,7 @@ static void GWAudioQueueRunnungListener(void * inUserData,
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    printf("GWSimplePlayer Audio Length = %lu\n", (unsigned long)[data length]);
     AudioFileStreamParseBytes(audioFileStreamID, (UInt32)[data length], [data bytes], 0);
 }
 
@@ -255,10 +259,10 @@ void GWAudioFileStreamPropertyListener(void * inClientData,
         [self _createAudioQueueWithAudioStreamDescription:&audioStreamDescription];
     }
     else if (inPropertyID == kAudioFileStreamProperty_FileFormat) {
-        OSStatus status = 0;
-        UInt32 dataSize = 0;
-        AudioStreamBasicDescription audioStreamDescription;
-        status = AudioFileStreamGetProperty(inAudioFileStream, kAudioFileStreamProperty_FileFormat, &dataSize, &audioStreamDescription);
+//        OSStatus status = 0;
+//        UInt32 dataSize = 0;
+//        AudioStreamBasicDescription audioStreamDescription;
+//        status = AudioFileStreamGetProperty(inAudioFileStream, kAudioFileStreamProperty_FileFormat, &dataSize, &audioStreamDescription);
     }
 }
 
