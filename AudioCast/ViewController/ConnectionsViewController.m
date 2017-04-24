@@ -38,11 +38,12 @@
     // Load Mp3 from url
     _mp3Data = [[NSMutableData alloc] init];
     NSURL *mp3URL = [NSURL URLWithString:@"http://picosong.com/cdn/a2b022865d185c4a8508a4212865413f.mp3"];
-//    _connection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:mp3URL] delegate:self];
+    _connection = [[NSURLConnection alloc] initWithRequest:[NSURLRequest requestWithURL:mp3URL] delegate:self];
 //    _mediaData = [NSData dataWithContentsOfURL:mp3URL];
     
     NSBundle *mainBundle = [NSBundle mainBundle];
-    NSString *myFile = [mainBundle pathForResource:@"Rythem" ofType:@"mp3"];
+//    NSString *myFile = [mainBundle pathForResource:@"Rythem" ofType:@"mp3"];
+    NSString *myFile = [mainBundle pathForResource:@"Naive" ofType:@"mp3"];
     NSLog(@"myFile = %@", myFile);
     _mediaData = [NSData dataWithContentsOfFile:myFile];
     
