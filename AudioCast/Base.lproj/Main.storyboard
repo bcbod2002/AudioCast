@@ -152,13 +152,76 @@
                     <view key="view" contentMode="scaleToFill" id="ZhO-wj-zqK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtz-FY-fJB">
+                                <rect key="frame" x="140.5" y="77" width="93" height="30"/>
+                                <state key="normal" title="Central Mode">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="centralButtonAction:" destination="CJz-MO-ZaT" eventType="touchUpInside" id="gpd-Xd-pb0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WAv-Fk-EA2">
+                                <rect key="frame" x="130.5" y="138" width="113" height="30"/>
+                                <state key="normal" title="Peripheral Mode">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="peripheralButtonAction:" destination="CJz-MO-ZaT" eventType="touchUpInside" id="CYE-Ne-umM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OH9-aD-CNQ">
+                                <rect key="frame" x="166" y="20" width="43.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-yn-oxf">
+                                <rect key="frame" x="145.5" y="509" width="84" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send Audio">
+                                    <color key="titleColor" red="1" green="0.442750853" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="senAudioButtonAction:" destination="CJz-MO-ZaT" eventType="touchUpInside" id="Bbq-d8-ves"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Receive Data : " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-YU-NHu">
+                                <rect key="frame" x="16" y="283" width="343" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="zxt-ek-ghf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WAv-Fk-EA2" firstAttribute="top" secondItem="Jtz-FY-fJB" secondAttribute="bottom" constant="31" id="337-KG-tcw"/>
+                            <constraint firstItem="OH9-aD-CNQ" firstAttribute="centerX" secondItem="ZhO-wj-zqK" secondAttribute="centerX" id="3BT-c5-fBv"/>
+                            <constraint firstItem="OH9-aD-CNQ" firstAttribute="top" secondItem="i1X-Eh-hY0" secondAttribute="bottom" id="Fdm-SC-bkk"/>
+                            <constraint firstItem="WAv-Fk-EA2" firstAttribute="centerX" secondItem="ZhO-wj-zqK" secondAttribute="centerX" id="JE8-Et-Bte"/>
+                            <constraint firstItem="ZdU-YU-NHu" firstAttribute="trailing" secondItem="ZhO-wj-zqK" secondAttribute="trailingMargin" id="JSa-6L-Djm"/>
+                            <constraint firstItem="ZdU-YU-NHu" firstAttribute="centerX" secondItem="ZhO-wj-zqK" secondAttribute="centerX" id="Obe-4L-wg2"/>
+                            <constraint firstItem="eqb-yn-oxf" firstAttribute="centerX" secondItem="ZhO-wj-zqK" secondAttribute="centerX" id="Qe1-qK-umM"/>
+                            <constraint firstItem="ZdU-YU-NHu" firstAttribute="centerY" secondItem="ZhO-wj-zqK" secondAttribute="centerY" id="WbH-aj-2mx"/>
+                            <constraint firstItem="4Dh-04-z7D" firstAttribute="top" secondItem="eqb-yn-oxf" secondAttribute="bottom" constant="79" id="dsd-j9-f51"/>
+                            <constraint firstItem="Jtz-FY-fJB" firstAttribute="centerX" secondItem="ZhO-wj-zqK" secondAttribute="centerX" id="eNQ-ax-8xv"/>
+                            <constraint firstItem="ZdU-YU-NHu" firstAttribute="leading" secondItem="ZhO-wj-zqK" secondAttribute="leadingMargin" id="s3D-29-blQ"/>
+                            <constraint firstItem="Jtz-FY-fJB" firstAttribute="top" secondItem="OH9-aD-CNQ" secondAttribute="bottom" constant="36" id="u8g-YI-yiE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bluetooth" image="Bluetooth" id="wTK-Ej-BJ9"/>
+                    <connections>
+                        <outlet property="modeLabel" destination="OH9-aD-CNQ" id="Q0L-f9-ghG"/>
+                        <outlet property="receiveTextView" destination="ZdU-YU-NHu" id="g6Z-OA-oyi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oc3-xo-Ao4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="481" y="1603"/>
+            <point key="canvasLocation" x="480.80000000000001" y="1602.5487256371816"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GQj-oI-pON">
