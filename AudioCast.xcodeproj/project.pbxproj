@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC4885241E922BDA00023504 /* GWBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4885231E922BDA00023504 /* GWBluetoothCentral.m */; };
+		FC4885271E922BE900023504 /* GWBluetoothPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4885261E922BE900023504 /* GWBluetoothPeripheral.m */; };
 		FC7A48411E81281A00BB95EA /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC7A48401E81281A00BB95EA /* MultipeerConnectivity.framework */; };
 		FC7A48461E812A5800BB95EA /* AlbumCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A48451E812A5800BB95EA /* AlbumCollectionView.m */; };
 		FC7A48471E812A5800BB95EA /* AlbumCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7A48451E812A5800BB95EA /* AlbumCollectionView.m */; };
@@ -33,7 +35,10 @@
 		FCDE138A1E8FE36400FFDC28 /* GBPing.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE13861E8FE36400FFDC28 /* GBPing.m */; };
 		FCDE138B1E8FE36400FFDC28 /* GBPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE13881E8FE36400FFDC28 /* GBPingSummary.m */; };
 		FCDE138E1E9011F300FFDC28 /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE138D1E9011F300FFDC28 /* BluetoothViewController.m */; };
+		FCDE13901E91195800FFDC28 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDE138F1E91195700FFDC28 /* CoreBluetooth.framework */; };
 		FCE9D35F1E82CC92003BB45F /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE9D35E1E82CC92003BB45F /* SimplePing.m */; };
+		FCF21C771E9DADC0002D90CE /* Same Old Love.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FCF21C751E9DADC0002D90CE /* Same Old Love.m4a */; };
+		FCF21C791E9DAE7B002D90CE /* Naive.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FCF21C781E9DAE7B002D90CE /* Naive.mp3 */; };
 		FCFB212F1E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */; };
 		FCFB21301E88EBA6009FAC9E /* GWSimplePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */; };
 /* End PBXBuildFile section */
@@ -56,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC4885221E922BDA00023504 /* GWBluetoothCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWBluetoothCentral.h; sourceTree = "<group>"; };
+		FC4885231E922BDA00023504 /* GWBluetoothCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWBluetoothCentral.m; sourceTree = "<group>"; };
+		FC4885251E922BE900023504 /* GWBluetoothPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWBluetoothPeripheral.h; sourceTree = "<group>"; };
+		FC4885261E922BE900023504 /* GWBluetoothPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWBluetoothPeripheral.m; sourceTree = "<group>"; };
 		FC7A48401E81281A00BB95EA /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		FC7A48441E812A5800BB95EA /* AlbumCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCollectionView.h; sourceTree = "<group>"; };
 		FC7A48451E812A5800BB95EA /* AlbumCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCollectionView.m; sourceTree = "<group>"; };
@@ -97,8 +106,11 @@
 		FCDE13891E8FE36400FFDC28 /* ICMPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMPHeader.h; sourceTree = "<group>"; };
 		FCDE138C1E9011F300FFDC28 /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothViewController.h; sourceTree = "<group>"; };
 		FCDE138D1E9011F300FFDC28 /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothViewController.m; sourceTree = "<group>"; };
+		FCDE138F1E91195700FFDC28 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		FCE9D35D1E82CC92003BB45F /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
 		FCE9D35E1E82CC92003BB45F /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		FCF21C751E9DADC0002D90CE /* Same Old Love.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Same Old Love.m4a"; sourceTree = "<group>"; };
+		FCF21C781E9DAE7B002D90CE /* Naive.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Naive.mp3; sourceTree = "<group>"; };
 		FCFB212D1E88EBA6009FAC9E /* GWSimplePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GWSimplePlayer.h; sourceTree = "<group>"; };
 		FCFB212E1E88EBA6009FAC9E /* GWSimplePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GWSimplePlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCDE13901E91195800FFDC28 /* CoreBluetooth.framework in Frameworks */,
 				FC7A48411E81281A00BB95EA /* MultipeerConnectivity.framework in Frameworks */,
 				FC892EEE1E80E9D90011E540 /* AVFoundation.framework in Frameworks */,
 				FC8492F71E80D5430083CC0C /* MediaAccessibility.framework in Frameworks */,
@@ -134,6 +147,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC4885201E922BA000023504 /* GWBluetoothCentral */ = {
+			isa = PBXGroup;
+			children = (
+				FC4885221E922BDA00023504 /* GWBluetoothCentral.h */,
+				FC4885231E922BDA00023504 /* GWBluetoothCentral.m */,
+			);
+			path = GWBluetoothCentral;
+			sourceTree = "<group>";
+		};
+		FC4885211E922BA000023504 /* GWBluetoothPeripheral */ = {
+			isa = PBXGroup;
+			children = (
+				FC4885251E922BE900023504 /* GWBluetoothPeripheral.h */,
+				FC4885261E922BE900023504 /* GWBluetoothPeripheral.m */,
+			);
+			path = GWBluetoothPeripheral;
+			sourceTree = "<group>";
+		};
 		FC7A48421E8129D500BB95EA /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +256,8 @@
 		FC8492BB1E80D2340083CC0C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FCF21C781E9DAE7B002D90CE /* Naive.mp3 */,
+				FCF21C751E9DADC0002D90CE /* Same Old Love.m4a */,
 				FCDE13811E8E281E00FFDC28 /* Rythem.mp3 */,
 				FC8492BC1E80D2340083CC0C /* main.m */,
 			);
@@ -252,6 +285,7 @@
 		FC8492EF1E80D3530083CC0C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE138F1E91195700FFDC28 /* CoreBluetooth.framework */,
 				FC7A48401E81281A00BB95EA /* MultipeerConnectivity.framework */,
 				FC892EEF1E80E9F50011E540 /* AudioUnit.framework */,
 				FC892EED1E80E9D90011E540 /* AVFoundation.framework */,
@@ -288,6 +322,8 @@
 		FCE9D35B1E82CC92003BB45F /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FC4885201E922BA000023504 /* GWBluetoothCentral */,
+				FC4885211E922BA000023504 /* GWBluetoothPeripheral */,
 				FCDE13831E8FE36400FFDC28 /* GBPing */,
 				FCFB212C1E88EA73009FAC9E /* GWSimplePlayer */,
 				FCE9D35C1E82CC92003BB45F /* SimplePing */,
@@ -430,7 +466,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF21C771E9DADC0002D90CE /* Same Old Love.m4a in Resources */,
 				FC8492CB1E80D2340083CC0C /* LaunchScreen.storyboard in Resources */,
+				FCF21C791E9DAE7B002D90CE /* Naive.mp3 in Resources */,
 				FCDE13821E8E281E00FFDC28 /* Rythem.mp3 in Resources */,
 				FC8492C81E80D2340083CC0C /* Assets.xcassets in Resources */,
 				FC8492C61E80D2340083CC0C /* Main.storyboard in Resources */,
@@ -466,9 +504,11 @@
 				FC7A484D1E81350900BB95EA /* MCManagerModel.m in Sources */,
 				FC8492C01E80D2340083CC0C /* AppDelegate.m in Sources */,
 				FCDE138B1E8FE36400FFDC28 /* GBPingSummary.m in Sources */,
+				FC4885271E922BE900023504 /* GWBluetoothPeripheral.m in Sources */,
 				FC7A48521E813DF300BB95EA /* ConnectionsViewController.m in Sources */,
 				FCE9D35F1E82CC92003BB45F /* SimplePing.m in Sources */,
 				FCB032A31E8CB430001F988A /* MPMediaModel.m in Sources */,
+				FC4885241E922BDA00023504 /* GWBluetoothCentral.m in Sources */,
 				FC8492BD1E80D2340083CC0C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
